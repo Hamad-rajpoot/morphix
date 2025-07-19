@@ -45,7 +45,6 @@ class Theme_Init {
      */
     private function setup_hooks(): void {
         add_action( 'after_setup_theme', [ $this, 'theme_supports' ] );
-        add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
         add_action( 'after_setup_theme', [ $this, 'register_menus' ] );
     }
 
@@ -56,39 +55,17 @@ class Theme_Init {
      */
     public function theme_supports(): void {
         // Add default support for various WordPress features.
-        add_theme_support( 'title-tag' );
-        add_theme_support( 'post-thumbnails' );
-        add_theme_support( 'html5', [
-            'search-form',
-            'comment-form',
-            'comment-list',
-            'gallery',
-            'caption',
-        ] );
-        add_theme_support( 'custom-logo' );
-    }
-
-    /**
-     * Enqueue theme CSS and JS files.
-     *
-     * @return void
-     */
-    public function enqueue_scripts(): void {
-        // Replace with your actual file paths.
-        wp_enqueue_style(
-            'morphix-style',
-            get_stylesheet_uri(),
-            [],
-            wp_get_theme()->get( 'Version' )
-        );
-
-        wp_enqueue_script(
-            'morphix-main-js',
-            get_template_directory_uri() . '/assets/js/main.js',
-            [],
-            wp_get_theme()->get( 'Version' ),
-            true
-        );
+    add_theme_support( 'title-tag' );
+    add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'custom-logo', [
+        'height'      => 100,
+        'width'       => 400,
+        'flex-height' => true,
+        'flex-width'  => true,
+    ] );
+    add_theme_support( 'custom-background' );
+    add_theme_support( 'editor-styles' );
+    add_editor_style( 'assets/css/editor-style.css' );
     }
 
     public function register_menus(): void {

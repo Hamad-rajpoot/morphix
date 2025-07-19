@@ -1,0 +1,18 @@
+
+/* ===== Morphix Dynamic Customizer CSS ===== */
+body {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+a,
+.btn,
+button {
+	background-color: #d69422;
+	color: #fff;
+}
+
+.btn,
+button {
+	border-radius: 4px;
+}

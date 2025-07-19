@@ -1,0 +1,8 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+.wp-block {
+    max-width: 800px;
+    margin: auto;
+}

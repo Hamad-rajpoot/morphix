@@ -1,0 +1,58 @@
+
+		:root {
+			--morphix-primary: #00c19e;
+			--morphix-secondary: #222;
+			--morphix-bg: #666666;
+			--morphix-container: 1280px;
+			--morphix-radius: 0px;
+		}
+
+		body {
+			background-color: var(--morphix-bg);
+			color: #333;
+			font-family: Roboto;
+			font-size: 20px;
+			line-height: 1.6px;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			font-family: Poppins;
+			font-weight: 600;
+			color: #111;
+		}
+
+		.container {
+			max-width: var(--morphix-container);
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		button,
+		.button,
+		.wp-block-button__link {
+			border-radius: var(--morphix-radius);
+		}
+
+	    button:hover,
+    .button:hover,
+    .wp-block-button__link:hover {
+        transform: scale(1.08);
+        transition: transform 0.3s ease;
+    }
+
+.site-footer .footer-inner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    padding: 40px 0;
+    background: #f9f9f9;
+}
+
+.site-footer .footer-col {
+    font-size: 14px;
+    color: #666;
+}
+
+
+		

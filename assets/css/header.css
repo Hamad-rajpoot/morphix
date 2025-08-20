@@ -1,0 +1,363 @@
+/* ========================
+   Global Header Base Styles
+======================== */
+.header {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    background: #ffffff;
+    position: relative;
+    z-index: 999;
+}
+
+.header .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .site-branding .site-logo {
+    max-height: 55px;
+    width: auto;
+    display: block;
+}
+
+.header .main-navigation .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.header .main-navigation .nav-menu li {
+    position: relative;
+}
+
+.header .main-navigation .nav-menu li a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.header .main-navigation .nav-menu li a:hover {
+    color: #0073e6;
+}
+
+/* ========================
+   Header Layout 1 (Logo Left, Menu Right)
+======================== */
+.header-layout1 .header-inner {
+    justify-content: space-between;
+}
+
+.header-layout1 .site-branding {
+    flex: 0 0 auto;
+}
+
+.header-layout1 .main-navigation {
+    text-align: right;
+}
+
+/* ========================
+   Header Layout 2 (Centered Menu, Logo Left)
+======================== */
+.header-layout2 {
+    width: 100%;
+    background-color: #ffffff; /* clean white header */
+    border-bottom: 1px solid #eaeaea;
+    padding: 12px 0;
+    position: relative;
+    z-index: 100;
+}
+
+/* Container */
+.header-layout2 .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.header-layout2 .logo img {
+    max-height: 55px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.header-layout2 .logo img:hover {
+    transform: scale(1.05);
+}
+
+/* Menu + Search Wrapper */
+.header-layout2 .menu-search {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Navigation Menu */
+.header-layout2 .main-menu .menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+}
+
+.header-layout2 .main-menu .menu li {
+    position: relative;
+}
+
+.header-layout2 .main-menu .menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.header-layout2 .main-menu .menu li a:hover {
+    color: #0073e6; /* theme accent color */
+}
+
+/* Dropdown Styling */
+.header-layout2 .main-menu .menu li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s ease;
+    padding: 12px 0;
+    z-index: 99;
+}
+
+.header-layout2 .main-menu .menu li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.header-layout2 .main-menu .menu li ul li {
+    padding: 0;
+}
+
+.header-layout2 .main-menu .menu li ul li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.header-layout2 .main-menu .menu li ul li a:hover {
+    background: #f8f8f8;
+    color: #0073e6;
+}
+
+/* Search */
+.header-layout2 .header-search {
+    position: relative;
+}
+
+.header-layout2 .header-search input[type="search"] {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+.header-layout2 .header-search input[type="search"]:focus {
+    border-color: #0073e6;
+    box-shadow: 0 0 6px rgba(0,115,230,0.2);
+    outline: none;
+}
+
+/* ===============================
+   Responsive Styling
+   =============================== */
+@media (max-width: 991px) {
+    .header-layout2 .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .header-layout2 .menu-search {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header-layout2 .main-menu .menu {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .header-layout2 .header-search input[type="search"] {
+        width: 100%;
+    }
+}
+
+
+/* ========================
+   Header Layout 3 (Logo Center, Menu Below)
+======================== */
+/* ============================
+   Header Layout 3 Styles
+   ============================ */
+
+.header-layout3 {
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fff; /* Change if needed */
+    border-bottom: 1px solid #eee;
+    z-index: 999;
+}
+
+/* Container */
+.header-layout3 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo Section */
+.header-layout3 .logo {
+    margin-bottom: 15px;
+}
+
+.header-layout3 .logo img {
+    max-height: 70px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Main Menu */
+.header-layout3 .main-menu {
+    width: 100%;
+    text-align: center;
+}
+
+.header-layout3 .main-menu .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px; /* spacing between menu items */
+}
+
+.header-layout3 .main-menu .menu li {
+    position: relative;
+}
+
+.header-layout3 .main-menu .menu li a {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 10px 5px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.header-layout3 .main-menu .menu li a:hover {
+    color: #0073e6; /* Accent color */
+}
+
+/* Dropdown Styles */
+.header-layout3 .main-menu .menu li ul.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background: #fff;
+    padding: 10px 0;
+    border: 1px solid #eee;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.header-layout3 .main-menu .menu li:hover > ul.sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.header-layout3 .main-menu .menu li ul.sub-menu li {
+    display: block;
+}
+
+.header-layout3 .main-menu .menu li ul.sub-menu li a {
+    padding: 10px 20px;
+    display: block;
+    color: #333;
+}
+
+.header-layout3 .main-menu .menu li ul.sub-menu li a:hover {
+    background-color: #f5f5f5;
+    color: #0073e6;
+}
+
+/* Responsive Menu */
+@media (max-width: 991px) {
+    .header-layout3 .container {
+        align-items: flex-start;
+    }
+
+    .header-layout3 .main-menu .menu {
+        display: block;
+        text-align: left;
+        gap: 0;
+    }
+
+    .header-layout3 .main-menu .menu li {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* ========================
+   Responsive Design (Mobile)
+======================== */
+@media (max-width: 991px) {
+    .header .header-inner {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header .main-navigation {
+        display: none; /* Hide menu by default for mobile */
+    }
+
+    /* (Optional: Add mobile hamburger menu styles here later) */
+}
+
+@media (max-width: 576px) {
+    .header .site-branding .site-logo {
+        max-height: 45px;
+    }
+}

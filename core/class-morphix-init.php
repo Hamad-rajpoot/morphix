@@ -63,15 +63,16 @@ class Theme_Init {
         'flex-height' => true,
         'flex-width'  => true,
     ] );
-    add_theme_support( 'custom-background' );
-    add_theme_support( 'editor-styles' );
+    //add_theme_support( 'custom-background' );
+    //add_theme_support( 'editor-styles' );
     add_editor_style( 'assets/css/editor-style.css' );
     }
 
     public function register_menus(): void {
     register_nav_menus([
-        'primary_menu'   => __( 'Primary Menu', 'morphix' ),
-        'footer_menu'    => __( 'Footer Menu', 'morphix' ),
-    ]);
+    'primary' => 'Primary Menu',
+    'left-menu' => 'Left Menu',
+    'right-menu' => 'Right Menu',
+]);
 }
 }

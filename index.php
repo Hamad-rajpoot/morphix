@@ -2,10 +2,11 @@
 <?php get_sidebar(); ?>
 
 <main class="site-main">
-    <section class="content-area">
-        <h2>Welcome to Morphix</h2>
-        <p>This is the default index template. You can replace it with your custom templates later.</p>
-    </section>
+    <section class="container">
+
+    <p> Test</p>
+    <button type="button" class="morphix-btn">Click Me</button>
+    
 </main>
 
 <?php get_footer(); ?>
